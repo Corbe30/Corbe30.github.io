@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html{
+    scroll-behavior: smooth;}
+  
+  body{
+    display:flex;
+    flex-direction:column;
+  }
+  
+  nav{
+    z-index:2;
+    font-family: 'Poppins', sans-serif;
+    position:fixed;
+    background:white;
+    height:50px;
+    width:100%;
+  }
+  .nav-links{
+    display:flex;
+    justify-content:space-around;
+    width:50%;
+    padding:10px;
+    margin:0 0 0 50%;
+  }
+  .nav-links li{
+    list-style:none;
+  }
+  .nav-links a{
+    text-decoration:none;
+    color:black;
+    font-size:14px;
+    letter-spacing:1px;
+  }
+  .nav-links a::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    transform:scaleX(0);
+    height:5px;
+    bottom:0;
+    left:0;
+    background: linear-gradient(to right, orange, pink);
+    transform-origin:bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .nav-links a:hover::before{
+    transform:scaleX(1);
+    transform-origin:bottom left;
+  }
+  @media screen and (max-width:475px){
+    .nav-links{
+        width:70%;
+      margin:0 0 0 20%;
+     }
+  }
+  
+  #welcome-section{
+    margin-top:50px;
+    height:100vh;
+    background-size:cover;
+    background-image:url(https://img.techpowerup.org/200604/2-forest3.jpg);
+    filter:hue-rotate(200deg);
+  }
+  #welcome-section h1{
+    font-family: 'Poppins', sans-serif;
+    margin-top:40vh;
+    color:white;
+    letter-spacing:2px;
+  }
+  #main-text{
+    font-family: 'Poppins', sans-serif;
+    font-size:13px;
+    margin-top:-5px;
+    color:white;
+    letter-spacing:2px;
+  }
+  #about{
+    font-family: 'Poppins', sans-serif;
+    font-size:13px;
+    padding:10%;
+    text-align:justify;
+  }
+  #projects{
+    background-size:cover;
+  
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  }
+  .project-tile{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    flex-direction: row;
+  }
+  #box{
+    margin:10px;
+    margin-top:50px;
+    margin-bottom:50px;
+    height:350px;
+    width:300px;
+    background:white;
+    transition: transform 0.3s linear;
+    transition: box-shadow .3s;
+  }
+  #box:hover{ 
+    box-shadow: 5px 5px 10px 1px grey;
+    transform: translate(-2px, -2px);} 
+  a{
+    text-decoration: none !important;
+  }
+  h3{
+    font-family: 'Poppins', sans-serif;
+    font-size:13px;
+    padding:3%;
+    color:black;
+  }
+  #contact{
+    display:flex;
+    flex-direction: row;
+    padding:15vh;
+    height:200px;
+    justify-content:space-around;
+  }
